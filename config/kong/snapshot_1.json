@@ -1,0 +1,110 @@
+{
+    "createdUser": null,
+    "updatedUser": null,
+    "id": 1,
+    "name": "tout debut",
+    "kong_node_name": "Kong",
+    "kong_node_url": "http://kong:8001",
+    "kong_version": "2.8.0",
+    "data": {
+        "services": [
+            {
+                "connect_timeout": 60000,
+                "tls_verify": null,
+                "name": "mock-service",
+                "protocol": "http",
+                "host": "mockbin.org",
+                "id": "76b13c36-67cf-48d0-b8ce-708b21e89dac",
+                "retries": 5,
+                "path": "/request",
+                "enabled": true,
+                "write_timeout": 60000,
+                "tags": null,
+                "port": 80,
+                "read_timeout": 60000,
+                "client_certificate": null,
+                "tls_verify_depth": null,
+                "ca_certificates": null,
+                "created_at": 1649604309,
+                "updated_at": 1649604309,
+                "extras": {}
+            }
+        ],
+        "routes": [
+            {
+                "tags": null,
+                "protocols": [
+                    "http",
+                    "https"
+                ],
+                "regex_priority": 0,
+                "service": {
+                    "id": "76b13c36-67cf-48d0-b8ce-708b21e89dac"
+                },
+                "destinations": null,
+                "methods": null,
+                "id": "0929b1a5-5d26-4246-ad83-49d808bbc79d",
+                "strip_path": true,
+                "path_handling": "v0",
+                "name": null,
+                "headers": null,
+                "request_buffering": true,
+                "response_buffering": true,
+                "sources": null,
+                "hosts": null,
+                "snis": null,
+                "https_redirect_status_code": 426,
+                "preserve_host": false,
+                "paths": [
+                    "/mock"
+                ],
+                "created_at": 1649604344,
+                "updated_at": 1649604344
+            }
+        ],
+        "consumers": [],
+        "plugins": [
+            {
+                "id": "6ba5edb6-a885-407b-a6da-d9a34790dace",
+                "tags": null,
+                "name": "oidc",
+                "enabled": true,
+                "service": null,
+                "config": {
+                    "client_id": "kong",
+                    "introspection_endpoint_auth_method": null,
+                    "redirect_uri_path": null,
+                    "token_endpoint_auth_method": "client_secret_post",
+                    "logout_path": "/logout",
+                    "redirect_after_logout_uri": "/",
+                    "ssl_verify": "no",
+                    "response_type": "code",
+                    "realm": "kong-stack",
+                    "introspection_endpoint": "http://192.168.1.11:8180/auth/realms/kong-stack/protocol/openid-connect/token/introspect",
+                    "recovery_page_path": null,
+                    "session_secret": null,
+                    "bearer_only": "yes",
+                    "scope": "openid",
+                    "filters": null,
+                    "client_secret": "plain_secret_value",
+                    "discovery": "http://192.168.1.11:8180/auth/realms/kong-stack/.well-known/openid-configuration"
+                },
+                "route": null,
+                "protocols": [
+                    "grpc",
+                    "grpcs",
+                    "http",
+                    "https"
+                ],
+                "created_at": 1649604424,
+                "consumer": null
+            }
+        ],
+        "acls": [],
+        "upstreams": [],
+        "certificates": [],
+        "snis": []
+    },
+    "createdAt": "2022-04-10T15:43:52.000Z",
+    "updatedAt": "2022-04-10T15:43:52.000Z"
+}
