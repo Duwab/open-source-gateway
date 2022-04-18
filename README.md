@@ -29,7 +29,7 @@
 | VueJS | <ul><li>url API (kong)</li><li>url OpenID server</li><li>Callback for standard [***Code Flow***](https://openid.net/specs/openid-connect-basic-1_0.html#CodeFlow) (keycloak adds guard then read+send code to get token)</li></ul> |
 | Keycloak | <ul><li>1 realm (per site), with multiple providers</li><li>Client for VueJS</li><li>Client for Kong</li><li>Build with custom theme</li><li>Seed: demo user, admin user</li></ul> |
 | Kong | <ul><li>oidc plugin</li><li>plugin "instance" with Keycloak url + token (should be same as front)</li><li>Routings to µservices</li></ul> |
-| µservices | <ul><li>url to other µservices</li><li>gRPC connection between some of them</li></ul> |
+| µservices | <ul><li>network aliases between each other</li><li>handle possible access by API Gateway</li></ul> |
 
 
 This should give the big picture (maybe think adding nginx to "mock" VPC entry point)
@@ -64,7 +64,10 @@ npm run serve
 - [ ] Project update made simple:
   - [ ] `git pull && migrate`
   - [ ] `git pull && restore`
-- [ ] gRPC sample
-  - [ ] 2 services go1 and go2 for demo
+- [ ] Submodules as solutions containing multiple µservices
+  - [ ] Demo gRPC with 2 go services
   - [ ] Doc to add another service
-- [ ] Structure documentation by solutions (Gateway, solution1(go1, go2), solution2(submodule))
+  - [ ] Update made simple (project/submodule level):
+    - [ ] migrate
+    - [ ] restore
+- [ ] Structure by solutions (Gateway, solution1(go1, go2), solution2(submodule))
