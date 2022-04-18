@@ -1,0 +1,3 @@
+[submodule "apps/vue-keycloak-js"]
+	path = apps/vue-keycloak-js
+	url = https://github.com/dsb-norge/vue-keycloak-js
